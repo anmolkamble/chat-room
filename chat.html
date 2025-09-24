@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Chat Room</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h3>Online (<span id="count">0</span>)</h3>
+      <ul id="usersList"></ul>
+      <button id="logoutBtn">Logout</button>
+    </aside>
+
+    <main class="chat">
+      <header>
+        <h2>Chat Room</h2>
+        <div id="meInfo" class="muted"></div>
+      </header>
+
+      <div id="messages" class="messages"></div>
+
+      <form id="msgForm" class="msgForm">
+        <input id="msgInput" autocomplete="off" placeholder="Type message..." maxlength="500" />
+        <button type="submit">Send</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/chat.js"></script>
+</body>
+</html>

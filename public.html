@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Chat Room — Login</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="card">
+    <h2>Enter Chat Room</h2>
+
+    <form id="loginForm">
+      <label>Username</label>
+      <input id="username" type="text" maxlength="30" required />
+
+      <label>Gender</label>
+      <select id="gender" required>
+        <option value="">--select--</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label>Age</label>
+      <input id="age" type="number" min="1" required />
+
+      <button type="submit">Enter Chat</button>
+      <p id="err" class="error"></p>
+    </form>
+
+    <p class="muted">Only users 18+ allowed. Username must be unique.</p>
+  </div>
+
+  <script src="/login.js"></script>
+</body>
+</html>
